@@ -1,0 +1,18 @@
+global_costmap:
+  footprint: [[0.12, 0.14], [0.12, -0.14], [-0.12, -0.14], [-0.12, 0.14]]  # This parameter specifies the region that can be deemed free.
+  footprint_padding: 0.01
+  update_frequency: 3 #how often cost should be recalculated
+  publish_frequency: 3 #how ofthen cost map should be published
+  transform_tolerance:  1.2 #The parameter specifies how frequently the cost map should be published to the topic.
+  #These parameters define size of map .
+  width: 200
+  height: 200
+  #this defines the orgin of the map
+  origin_x: -12.2
+  origin_y: -17
+  rolling_window: true
+  inflation_radius: 2.8 #This parameter specifies the distance from the obstruction at which cost should be evaluated; any distance greater than this number is viewed as no cost.
+  resolution: 0.050000
+  plugins:
+   - {name: static_layer,        type: "costmap_2d::StaticLayer"}
+  

@@ -1,0 +1,9 @@
+global_frame: map
+rolling_window: true #This parameter defines if map will not change in time.
+
+track_unknown_space: true
+# This parameter classifies the following parameters as plugins.
+plugins:
+  - {name: obstacles_laser,           type: "costmap_2d::ObstacleLayer"}
+  - {name: inflation,                 type: "costmap_2d::InflationLayer"}
+  
